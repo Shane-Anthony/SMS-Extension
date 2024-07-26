@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "PureGarden TEXT Extension",
+  "version": "1.0.7",
+  "description": "Adds a utility to WorkEver to allow quick sending of Confirmation SMS to customers",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false 
+  },
+  "icons": {
+    "48": "apple-touch-icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{18b14cfb-356b-4b90-97a1-d2690d8c3a9e}"
+    }
+  },
+  "permissions": [
+    "https://rest.nexmo.com/sms/json",
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "PGTXT",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://gatetrading.workever.app/jobs/view/*"
+      ],
+      "js": [
+        "pullData.js"
+      ]
+    }
+  ]
+}

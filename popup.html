@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="popup.css"/>
+		<title>WEPG popup</title>
+	</head>
+	<body>
+		<img src="icon.png" />
+		<h2 id="title">Invalid Page</h2>
+		<div class="container hidden" id="main">
+			
+			<div class="row">
+				<label>Phone Number:</label> <input id="phone" type="text"/>
+			</div>
+			
+
+			<hr>
+			<div id="textMessage">
+				<pre id="textMessageContent"></pre>
+			</div>
+			<hr>
+			<div class="row">
+				<div id="recipientPhoneNumber"></div>
+				<button>Send Text</button>
+			</div>
+			<div class="row">
+				<input type="text" class="hidden" id="apiSecret" placeholder="Please set API Secret" value="">
+			</div>
+			
+		</div>
+		<div class="container hidden" id="sending">
+			<div id="sendingText">
+				Sending SMS to Vonage...
+			</div>
+			<div id="sendingResponse" class="status hidden">
+				<img src="confirm.png" class="icon hidden" id="tick" />
+				<img src="cancel.png" class="icon hidden" id="cross" />
+			</div>
+			<div id="message"></div>
+		</div>
+		
+		<script src="popup.js"></script>
+	</body>
+</html>
