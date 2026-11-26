@@ -47,7 +47,7 @@ function sendJobToText() {
     const from = "ServiceTeam";
     const to = document.getElementById("phone").value;
     const text = document.getElementById("textMessageContent").innerText;
-    const apiKey ="7aac93aa"; 
+    const apiKey ="[hidden]"; 
     const apiSecret = document.getElementById("apiSecret").value;
     if (apiSecret === undefined || apiSecret === "" || apiSecret === "undefined"){
 		showAPISecretField();
